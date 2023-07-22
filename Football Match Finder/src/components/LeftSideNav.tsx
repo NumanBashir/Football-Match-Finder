@@ -1,8 +1,11 @@
+import LeftSideNavItem from "./LeftSideNavItem";
+
 function LeftSideNav() {
   return (
     <>
-      <h1>Hello</h1>
-      <h2>Hello now</h2>
+      <div className="outerBox">
+        <LeftSideNavItem />
+      </div>
     </>
   );
 }
