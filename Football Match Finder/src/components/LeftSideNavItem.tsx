@@ -1,15 +1,27 @@
-function LeftSideNavItem() {
+interface LeftSideNavItemProps {
+  handleClick: (text: string) => void;
+}
+
+function LeftSideNavItem({ handleClick }: LeftSideNavItemProps) {
   return (
-    // Item side bar
+    // Item side
     <>
       <div>
-        <button className="nav-button">Home</button>
+        <button className="nav-button" onClick={() => handleClick("Home")}>
+          Home
+        </button>
         <br />
-        <button className="nav-button">Matches</button>
+        <button className="nav-button" onClick={() => handleClick("Matches")}>
+          Matches
+        </button>
         <br />
-        <button className="nav-button">Profile</button>
+        <button className="nav-button" onClick={() => handleClick("Profile")}>
+          Profile
+        </button>
         <br />
-        <button className="nav-button">Settings</button>
+        <button className="nav-button" onClick={() => handleClick("Settings")}>
+          Settings
+        </button>
         <br />
       </div>
     </>
