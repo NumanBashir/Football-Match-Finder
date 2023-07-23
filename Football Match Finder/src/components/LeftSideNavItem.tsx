@@ -1,27 +1,25 @@
-interface LeftSideNavItemProps {
-  handleClick: (text: string) => void;
-}
+import { Link } from "react-router-dom";
 
-function LeftSideNavItem({ handleClick }: LeftSideNavItemProps) {
+function LeftSideNavItem() {
   return (
     // Item side
     <>
       <div>
-        <button className="nav-button" onClick={() => handleClick("Home")}>
-          Home
-        </button>
+        <Link to="/home">
+          <button className="nav-button">Home</button>
+        </Link>
         <br />
-        <button className="nav-button" onClick={() => handleClick("Matches")}>
-          Matches
-        </button>
+        <Link to="/matches">
+          <button className="nav-button">Matches</button>
+        </Link>
         <br />
-        <button className="nav-button" onClick={() => handleClick("Profile")}>
-          Profile
-        </button>
+        <Link to="/profile">
+          <button className="nav-button">Profile</button>
+        </Link>
         <br />
-        <button className="nav-button" onClick={() => handleClick("Settings")}>
-          Settings
-        </button>
+        <Link to="/settings">
+          <button className="nav-button">Settings</button>
+        </Link>
         <br />
       </div>
     </>

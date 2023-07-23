@@ -1,14 +1,10 @@
 import LeftSideNavItem from "./LeftSideNavItem";
 
-interface LeftSideNavProps {
-  handleClick: (text: string) => void;
-}
-
-function LeftSideNav({ handleClick }: LeftSideNavProps) {
+function LeftSideNav() {
   return (
     <>
       <div className="outerBox">
-        <LeftSideNavItem handleClick={handleClick} />
+        <LeftSideNavItem />
       </div>
     </>
   );
