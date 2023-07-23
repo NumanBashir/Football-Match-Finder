@@ -10,13 +10,15 @@ function App() {
   return (
     <>
       <Router>
-        <LeftSideNav />
-        <Routes>
-          <Route path="/home" element={<Home />} />
-          <Route path="/matches" element={<Matches />} />
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/settings" element={<Settings />} />
-        </Routes>
+        <div className="app-container">
+          <LeftSideNav />
+          <Routes>
+            <Route path="/home" element={<Home />} />
+            <Route path="/matches" element={<Matches />} />
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/settings" element={<Settings />} />
+          </Routes>
+        </div>
       </Router>
     </>
   );

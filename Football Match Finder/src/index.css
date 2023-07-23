@@ -32,3 +32,10 @@
   font-size: 2em;
   margin-left: 2em;
 }
+
+.app-container {
+  display: flex;
+}
+
+
+
