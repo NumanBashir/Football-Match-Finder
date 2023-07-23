@@ -1,5 +1,6 @@
 function LeftSideNavItem() {
   return (
+    // Item side bar
     <>
       <div>
         <button className="nav-button">Home</button>
