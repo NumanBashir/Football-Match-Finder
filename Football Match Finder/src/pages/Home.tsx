@@ -28,7 +28,9 @@ function Matches() {
           />
           <button onClick={handleClick}>Submit</button>
         </div>
-        <StatsHistory />
+        <div className="statsComponents">
+          <StatsHistory />
+        </div>
       </div>
     </>
   );

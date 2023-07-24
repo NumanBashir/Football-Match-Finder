@@ -1,3 +1,7 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
 .outerBox {
   width: 200px;
   height: 500px;
@@ -37,7 +41,46 @@
   display: flex;
 }
 
+.myTable {
+  margin: 20px;
+}
 
+.statsComponents {
+  position: absolute;
+  bottom: 300px;
+}
+
+.myTable table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 15px 0;
+  font-size: 0.9em;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.myTable th,
+.myTable td {
+  padding: 12px 15px;
+}
+
+.myTable th {
+  background-color: #f44336;
+  color: white;
+  text-align: left;
+}
+
+.myTable tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.myTable tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.myTable tr:last-of-type {
+  border-bottom: 2px solid #f44336;
+}
 
 
 
