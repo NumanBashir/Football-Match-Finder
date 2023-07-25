@@ -2,32 +2,46 @@ import { SetStateAction, useState } from "react";
 import StatsHistory from "../components/StatsHistory";
 
 function Matches() {
-  const [myName, setMyName] = useState("My Name");
-  const [inputValue, setInputValue] = useState("");
+  const [message, setMessage] = useState("");
+  const [updated, setUpdated] = useState("");
 
-  function handleInputChange(event: {
+  const handleChange = (event: {
     target: { value: SetStateAction<string> };
-  }) {
-    setInputValue(event.target.value);
-  }
+  }) => {
+    setMessage(event.target.value);
+  };
+
+  const handleKeyDown = (event: { key: string }) => {
+    if (event.key === "Enter") {
+      // 👇 Get input value
+      setUpdated(message);
+      setMessage("");
+    }
+  };
 
   function handleClick() {
-    setMyName(inputValue);
+    setUpdated(message);
+    setMessage("");
   }
 
   return (
     <>
       <div className="container-match">
-        <h1>Welcome {myName}</h1>
+        <h1>Welcome {updated}</h1>
         <div className="submitOfName">
           <input
             type="text"
-            placeholder="Enter your name"
-            value={inputValue}
-            onChange={handleInputChange}
+            id="message"
+            name="message"
+            value={message}
+            onChange={handleChange}
+            onKeyDown={handleKeyDown}
           />
           <button onClick={handleClick}>Submit</button>
         </div>
+        <h2 className="homeWelcome">
+          Here you have an overview of your home screen
+        </h2>
         <div className="statsComponents">
           <StatsHistory />
         </div>
