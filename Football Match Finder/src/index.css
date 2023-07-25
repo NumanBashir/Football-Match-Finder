@@ -81,5 +81,16 @@ body {
   border-bottom: 2px solid #f44336;
 }
 
+.matchContainer {
+  border-radius: 5%;
+  border:2px solid black;
+
+}
+
+.leftSideListViewItem {
+  margin-left: 10px;
+  margin-top: 15px;
+}
+
 
 
