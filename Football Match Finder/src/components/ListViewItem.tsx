@@ -9,8 +9,16 @@ function ListViewItem() {
         </div>
 
         <div className="rightSideListViewItem">
-          <div className="iconListViewitem"></div>
-          <div className="buttonListViewItem"></div>
+          <div className="iconListViewitem">
+            <img
+              className="footballImage"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Football_%28soccer_ball%29.svg/1200px-Football_%28soccer_ball%29.svg.png"
+            />
+          </div>
+          <div className="buttonListViewItem">
+            <button>Join</button>
+            <button>Cancel</button>
+          </div>
         </div>
       </div>
     </>
